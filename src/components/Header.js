@@ -3,10 +3,19 @@ import Navbar from './Navbar'
 
 class Header extends Component {
     render() {
+        const styleTitle = {
+            textAlign: 'center',
+            margin: '0'
+        }
+        
+        const styleHeader = {
+            backgroundColor: 'black',
+            color: 'white'
+        }
+
         return(
-            <header>
-                <h1>HTC</h1>
-                <h2>Half the clique</h2>
+            <header style={styleHeader}>
+                <h1 style={styleTitle}>HTC</h1>
                 <Navbar />
             </header>
         )
