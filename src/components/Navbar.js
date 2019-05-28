@@ -1,27 +1,18 @@
 import React, {Component} from 'react'
+import style from '../styles/NavbarStyle'
+import {Link} from 'react-router-dom'
 
 class Navbar extends Component {
     render() {
-        const styleUl = {
-            display: 'flex',
-            listStyle: 'none',
-            flexWrap: 'wrap',
-            justifyContent: 'center'
-        }
-
-        const styleA = {
-            padding: '15px',
-            textAlign: 'center',
-            color: 'white',
-            textDecoration: 'none'
-        }
+        const links = this.props.titles.map(subj => 
+            <Link key={subj.title} style={style.a} to={'/' + subj.title.replace(/ /g, '-').toLowerCase()}>
+                {subj.title}
+            </Link>
+        )
 
         return(
-            <ul style={styleUl}>
-                <a href='#home' style={styleA}><li>Home</li></a>
-                <a href='#subj1' style={styleA}><li>Subj1</li></a>
-                <a href='#subj2' style={styleA}><li>Subj2</li></a>
-                <a href='#subj3' style={styleA}><li>Subj3</li></a>
+            <ul style={style.ul}>
+                {links}
             </ul>
         )
     }
