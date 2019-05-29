@@ -5,18 +5,18 @@ import Footer from './components/Footer'
 import contentData from './contentData'
 
 class App extends Component {
-  // const { params } = props;
   render() {
-    const { match } = this.props;
-    const { params } = match;
-    let id = params.id;
-
+    let id = this.props.match.params.id;
     if (!id) id = contentData[0].title.replace(/ /g, '-').toLowerCase()
 
+    const topicTitles = contentData.map((topic) => (
+      {title: topic.title}
+    ))
+    
     return (
       <div>
-        <Header titles={contentData}/>
-        <Content subjects={contentData} id={id}/>
+        <Header topics={topicTitles}/>
+        <Content topics={contentData} id={id}/>
         <Footer />
       </div>
     )

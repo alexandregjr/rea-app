@@ -7,7 +7,7 @@ class Header extends Component {
         return(
             <header style={style.header}>
                 <h1 style={style.title}>HTC</h1>
-                <Navbar titles={this.props.titles}/>
+                <Navbar topics={this.props.topics}/>
             </header>
         )
     }

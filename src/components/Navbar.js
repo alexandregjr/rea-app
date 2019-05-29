@@ -4,9 +4,13 @@ import {Link} from 'react-router-dom'
 
 class Navbar extends Component {
     render() {
-        const links = this.props.titles.map(subj => 
-            <Link key={subj.title} style={style.a} to={'/' + subj.title.replace(/ /g, '-').toLowerCase()}>
-                {subj.title}
+        const links = this.props.topics.map((topic, index) =>         
+            <Link 
+                to={'/topic/' + topic.title.replace(/ /g, '-').toLowerCase()}
+                style={style.a} 
+                key={index} 
+            >
+                {topic.title}
             </Link>
         )
 
