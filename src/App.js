@@ -1,24 +1,22 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'
 import Header from './components/Header'
 import Content from './components/Content'
 import Footer from './components/Footer'
-import contentData from './contentData'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 class App extends Component {
-  render() {
-    let id = this.props.match.params.id;
-    if (!id) id = contentData[0].title.replace(/ /g, '-').toLowerCase()
-
-    const topicTitles = contentData.map((topic) => (
-      {title: topic.title}
-    ))
-    
+  render() { 
     return (
-      <div>
-        <Header topics={topicTitles}/>
-        <Content topics={contentData} id={id}/>
+      <BrowserRouter>
+        <Header/>
+        <Switch>
+            <Route exact path='/topic/:id' component={Content} />
+            <Route path='/' component={Content} />
+        </Switch>
         <Footer />
-      </div>
+      </BrowserRouter>
+        
+
     )
   }
 }

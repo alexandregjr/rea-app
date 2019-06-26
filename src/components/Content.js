@@ -1,18 +1,16 @@
-import React, {Component} from 'react'
-import Subject from './Topic'
+import React from 'react'
+import Subject from './Subject'
+import contentData from '../contentData'
 
-class Content extends Component {
-    render() {
-        const content = this.props.topics.map((topic, index) =>
-            <Subject key={index} info={topic} id={this.props.id} />
-        )
-        
+function Content(props) {
+        let { id } = props.match.params
+        if (!id) id = 1
+
         return(
             <main>
-                {content}
+                <Subject info={contentData[(id - 1)]} />
             </main>
         )
-    }
 }
 
 export default Content

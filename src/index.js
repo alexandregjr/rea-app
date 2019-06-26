@@ -3,15 +3,9 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
 
 ReactDOM.render(
-    <BrowserRouter>
-        <Switch>
-            <Route exact path='/' component={App} />
-            <Route exact path='/topic/:id' component={App} />
-        </Switch>
-    </BrowserRouter>,
+    <App />,
     document.getElementById('root')
 )
 
