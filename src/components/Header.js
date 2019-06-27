@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from './Navbar'
-import style from '../styles/HeaderStyle'
 import contentData from '../contentData'
 
 function Header(props) {
@@ -9,9 +8,11 @@ function Header(props) {
     ))
 
     return(
-        <header style={style.header}>
-            <h1 style={style.title}>HTC</h1>
-            <Navbar topics={titles}/>
+        <header>
+            <div className={'content'}>
+                <h1>ADEL Estudos</h1>
+                <Navbar topics={titles}/>
+            </div>
         </header>
     )
 }

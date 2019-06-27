@@ -1,6 +1,5 @@
 import React from 'react'
 import Subject from './Subject'
-import contentData from '../contentData'
 
 function Content(props) {
         let { id } = props.match.params
@@ -8,7 +7,9 @@ function Content(props) {
 
         return(
             <main>
-                <Subject info={contentData[(id - 1)]} />
+                <div className={'content'}>
+                    <Subject from={(id - 1)} />
+                </div>
             </main>
         )
 }

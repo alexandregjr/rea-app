@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Content from './components/Content'
 import Footer from './components/Footer'
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import './App.css'
 
 class App extends Component {
   render() { 

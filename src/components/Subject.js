@@ -1,19 +1,21 @@
 import React from 'react'
 import Exercise from './Exercise'
+import contentData from '../contentData'
 
 function Subject(props) {
-    const subtopics = props.info.subtopics.map((topic, index) => (
-        <div key={index}>
-            <h4>{topic.title}</h4>
-            <p>{topic.content}</p>
+    const data = contentData[(props.from)];
+    const subtopics = data.subtopics.map((topic, index) => (
+        <div className={'subtopic'} key={index}>
+            <h3>{topic.title}</h3>
+            {topic.content}
         </div>
     ))
     
     return (
         <div>
-            <h3>{props.info.title}</h3>
+            <h2>{data.title}</h2>
             {subtopics}
-            <Exercise info={props.info} />
+            <Exercise subjectId={(props.from)} />
         </div>
     )
 }

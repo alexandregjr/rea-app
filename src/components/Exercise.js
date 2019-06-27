@@ -1,14 +1,18 @@
-import React, {Component} from 'react'
+import React from 'react'
+import Question from './Question'
+import contentData from '../contentData'
 
-class Exercise extends Component {
-    render() {
-        return (
-            <div>
-                <h3>Exercise</h3>
-                <p>sample exercise {this.props.info.title}</p>
-            </div>
-        )
-    }
+
+function Exercise(props) {
+    const exercises = contentData[props.subjectId].exercise
+    const questions = exercises.map((questionData, id) => <Question subjectId={props.subjectId} questionId={id} key={id} />)
+   
+    return (
+        <div className={'exercise'}>
+            <h2>Exercícios</h2>
+            {questions}
+        </div>
+    )
 }
 
 export default Exercise
