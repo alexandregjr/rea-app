@@ -165,7 +165,7 @@ const contentData =
                 title:'Pipeline',
                 content:
                 [
-                    <p>Nos tópicos abaixo são explicados o funcionamento e as peculiariadades da arquitetura pipeline, que exige atenção dedicada</p>
+                    <p>Nos tópicos abaixo são explicados o funcionamento e as peculiariadades da arquitetura pipeline, que exige atenção dedicada.</p>
                 ]
                 
             },
@@ -626,6 +626,126 @@ const contentData =
             }
         ]
 
+    },
+    {
+    	title: 'Entrada e Saída',
+    	subtopics:
+    	[
+            {
+                title: 'Definição',
+                content:
+                [
+                <p>Os dispositivos de entrada e saída tem a função de fazer o computador ter uma interface com o mundo exterior. Podem ser caracterizados de 3 formas</p>,
+                <ul>
+                    <li>Comportamento: Entrada (teclado, mouse) / Saída (monitor, impressora) / Armazenamento (disco, memória flash)</li>
+                    <li>Relacionamento: com o ser humano (teclado, vídeo, impressora) ou com o computador (discos, sensores, interface de rede) </li>
+                    <li>Taxa de transferência: bytes/seg ; transferências/seg</li>
+                </ul>
+                ]
+            },
+            {
+                title: 'Módulo de E/S',
+                content:
+                [
+                <p>Considerado o terceiro elemente de um sistema de computação, exerce a função de comunição entre os dispositivos periféricos e o barramento do sistema. Dessa forma, o módulo E/S faz a interface com o processador e a memória, faz interface entra os vários disposistivos periféricos de um computador e livra a CPU do gerenciamento dos mesmos.</p>,
+                <p> O controle do fluxo de dados entre os disposistivos é feito da seguinte forma </p>,
+                <ul>
+                    <li>Processador verifica estado do dispositivo</li>
+                    <li>Módulo de E/S retorna o estado</li>
+                    <li>Se estiver pronto para transmitir, processador requisita transferência, enviando um comando para o módulo de E/S</li>
+                    <li>O módulo de E/S obtém uma unidade de dados do dispositivo externo</li>
+                    <li>Os dados são transferidos do módulo de E/S para o processador</li>
+                </ul>,
+                <p>Além disso, o módulo E/S identifica o endereço único de cada dispositivo. Os disposistivos, por sua vez, mandam sinais de controle, estado e dados para o módulo</p>,
+                <p> Para equilibrar as taxas de transferência lentas dos disposistivos periféricos, o módulo E/S armazena dados dos disposistivos em um buffer para não ocupar a memória com uma taxa de transferência baixa, e então, o módulo faz uma transferência rápida com a memória</p>,
+                <p>Como os disposistivos podem ter mau funcionamento, o módulo de E/S cuida de detectar possíveis erros com bit de paridade</p> 
+                ]
+            },
+            {
+                title: 'E/S programada',
+                content:
+                [
+                    <p>Para trocar dados entre o processador e o módulo de E/S, há um programa que manipula as operações E/S</p>,
+                    <ul>
+                        <li>CPU requisita uma operação de E/S</li>
+                        <li>Módulo de E/S realiza a operação</li>
+                        <li>Módulo de E/S seta o bit de estado</li>
+                        <li>CPU fica constantemente verificando o bit de estado</li>
+                        <li>Módulo de E/S não informa a CPU diretamente</li>
+                        <li>Módulo de E/S não interrompe a CPU</li>
+                        <li>A CPU pode esperar ou voltar para verificar posteriormente</li>
+                    </ul>
+                ]
+            },
+            {
+                title: 'E/S dirigida por interrupção.',
+                content:
+                [
+                <p>Para evitar que o sistema fique travado no caso de falha nos disposistivos E/S, foi implementado um sistema de monitoração por um temporizador, que interrompe o processo caso exceda o tempo limite.Caso uma tarefa mais urgente suja, interrompe a execução atual para realizar a urgente </p>
+                ]
+            },
+            {
+                title: 'E/S com Acesso Direto à Memória (DMA)',
+                content:
+                [
+                <p>Com o problema da taxa de transferência de E/S ficar limitada pela velocidade do processador, e este ficar sobrecarregado com as operações do módulo E/S, foi criado o DMA. O DMA permite que certos dispositivos de hardware num computador acessem a memória do sistema para leitura e escrita independentemente da CPU</p>,
+                <p>Com esse novo módulo conctado ao barramento, o desempenho do computado é aumentado.</p>
+                ]
+            },
+            {
+                title: 'Barramento',
+                content:
+                [
+                <p>Barramento é um conjunto de linhas de comunicação que permitem a interligação entre dispositivos, como a CPU, a memória e outros periféricos. São as linhas de transmissão que transmitem as informações entre o processador, memória e todos os demais periféricos do computador</p>,
+                <p>Existem 3 funções distintas nos barramentos:</p>,
+                <ul>
+                    <li>Função de transporte dos dados. </li>
+                    <li>Função de indicar endereço de memória dos dados que o processador deve retirar ou enviar. </li>
+                    <li>Função que controla as ações dos barramentos anteriores. Controla solicitações e confirmações.</li>
+                </ul>,
+                <p>A largura (quantidade de bits que podem ser transmitidos ao mesmo tempo) apresenta grande influência no desempenho, podendo ser de 8, 16, 32, ou 64 bits</p>,
+                ]
+            }
+    	],
+    	exercise:
+    	[
+            {
+                question:'Questão 1: Para que servem os disposistivos de entrada e saída?',
+                options:
+                [
+                    'A) Para fazer a interface entre o computador e mundo exterior', 
+                    'B) Tornar o processamento mais rapido', 
+                    'C) Aumentar capacidade de memória', 
+                    'D)Resolver as bolhas do pipeline'
+                ],
+                answer:'A',
+                explanation:'Suprem a necessidade de interação entre o computador e o mundo'
+            },
+            {
+                question:'Questão 2: Qual a principal função do módulo E/S?',
+                options:
+                [
+                    'A) Transportar dados', 
+                    'B)Conectar o processador e a memória', 
+                    'C)Lidar com as velocidades e gerenciar os disposistivos E/S', 
+                    'D)Proteger o computador'
+                ],
+                answer:'C',
+                explanation:'O módulo E/S controla o fluxo de dados dos disposistivos externos e o computador'
+            },
+            {
+                question:'Questão 3: O que são barramentos?',
+                options:
+                [
+                    'A)Estrutura que serve para encontrar possiveis erros na cache e reportá-los', 
+                    'B)Um conjunto de linhas de comunicação que permitem a interligação entre dispositivos', 
+                    'C) Dispositivos que equilibram as taxas de transferência lentas dos disposistivos periféricos e a memória', 
+                    'D) Um módulo que aumenta o clock do processador'
+                ],
+                answer: 'B',
+                explanation:'Os barramentos são fios que ligam os componentes do processador'
+            }
+    	]
     }
 ]
 

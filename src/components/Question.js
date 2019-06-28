@@ -16,7 +16,13 @@ class Question extends React.Component{
         this.questionData = contentData[this.props.subjectId].exercise[this.props.questionId]
     }
 
-    
+    componentWillReceiveProps(nextProps) {
+        this.questionData = contentData[nextProps.subjectId].exercise[nextProps.questionId]
+        this.setState({
+            answer: null,
+            explain: false
+        })
+    }
 
     onAnswerClick(event){
         this.setState({answer: event.target.id})
@@ -46,19 +52,6 @@ class Question extends React.Component{
     }
 
     render(){
-        // if(this.state.answer === null){
-        //     let ret = this.questionData.options.map((opt, id) => 
-        //         <button className="unanswered" onClick={this.onAnswerClick} id={id} key={id}>{opt}</button>
-        //     )
-                
-        //     return(
-        //         <div className={'question'}>
-        //             <h3>{this.questionData.question}</h3>
-        //             {ret}
-        //         </div>
-
-        //     )
-        // }
         let ret = this.questionData.options.map((opt, id) => 
             <button className="unanswered" onClick={this.onAnswerClick} id={id} key={id}>{opt}</button>
         )
