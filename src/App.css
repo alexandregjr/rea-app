@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 * {
     padding: 0;
@@ -59,7 +60,7 @@ main div.subtopic p {
 }
 
 main div.subtopic ul {
-    margin: 0 20px;
+    margin: 20px;
     padding: 20px;
     list-style-position: inside;
     background-color: #ecf0f1;
@@ -69,6 +70,15 @@ main div.subtopic ul {
 main div.subtopic img {
     margin: 0 auto;
     max-width: 90%;
+}
+
+main div.subtopic pre {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #ecf0f1;
+    padding: 20px;
+    white-space: pre-wrap;
+    margin: 20px;
+    border-radius: 3px;
 }
 
 main ul li {

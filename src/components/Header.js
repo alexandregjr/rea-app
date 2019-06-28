@@ -10,7 +10,7 @@ function Header(props) {
     return(
         <header>
             <div className={'content'}>
-                <h1>ADEL Estudos</h1>
+                <h1>AGPJDSBPGEPLGAJ Estudos</h1>
                 <Navbar topics={titles}/>
             </div>
         </header>
