@@ -19,7 +19,7 @@ const contentData =
                 [  
                     <p>A estrutura de um programa assembly possui o segmento de dados, onde são declaradas as variáveis, e o segmento de texto onde há o código fonte.</p>,
                     <p>São usados rótulos para identificar uma linha de código, e esse rótulo pode ser utilizado posteriormente, em desvos e chamadas de procedimento para voltar à essa linha.</p>,
-                    <p>Além disso, o assembly mips conta com diretivas do montado para determinar configurações ao código, como alinhamento (.aling), se uma dada variável é string (.ascii) entre outros.</p>,
+                    <p>Além disso, o assembly MIPS conta com diretivas do montado para determinar configurações ao código, como alinhamento (.aling), se uma dada variável é string (.ascii) entre outros.</p>,
                     <p>O montador chama o sistema para realizar operações de escrita na tela e leitura do teclado, além de indicar término do pragrama, através do comando syscall</p>
                 ]
             },
