@@ -7,6 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 div.content {
     max-width: 900px;
     margin: 0 auto;
@@ -45,8 +49,11 @@ main {
 }
 
 main h2 {
+    padding: 10px 20px;
+}
+
+main h2 a {
     color: #2c3e50;
-    padding: 10px 20px
 }
 
 main div.subtopic {
@@ -56,8 +63,11 @@ main div.subtopic {
 }
 
 main div.subtopic h3 {
+    padding: 10px 20px;
+}
+
+main div.subtopic h3 a {
     color: #34495e;
-    padding: 10px 20px
 }
 
 main div.subtopic p {
@@ -131,7 +141,7 @@ main div.exercise div.question button {
 }
 
 main div.exercise div.question button:hover, main div.exercise div.question button:focus, main div.exercise div.question button:active {
-    box-shadow: 0 0 0 3px coral;
+    box-shadow: 0 0 0 5px #BEC7CD;
 }
 
 main div.exercise div.question button.unanswered {
