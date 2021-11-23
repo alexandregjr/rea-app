@@ -130,6 +130,10 @@ main div.exercise div.question button {
     color: #000000;
 }
 
+main div.exercise div.question button:hover, main div.exercise div.question button:focus, main div.exercise div.question button:active {
+    box-shadow: 0 0 0 3px coral;
+}
+
 main div.exercise div.question button.unanswered {
     cursor: pointer;
 }
