@@ -135,7 +135,7 @@ const contentData =
                     <ul>
                         <li>Monociclo: cada instrução é executada em um único ciclo de clock. Portanto, o clock deve ter tempo suficiente para a instrução mais lenta ser executada</li>
                         <li>Multiciclo: O ciclo de busca/execução é dividio em vários passados, e cada passado é executado em um clock.</li>
-                        <li>Pipeline: executa cada instrução em vários passos, cada passo em um clock, e processa multiplas isntruções em paralelo.Sua taxa é limitada ao estágio mais lento</li>
+                        <li>Pipeline: executa cada instrução em vários passos, cada passo em um clock, e processa multiplas instruções em paralelo.Sua taxa é limitada ao estágio mais lento</li>
                     </ul>
                 ]
             },
@@ -158,7 +158,7 @@ const contentData =
                 content:
                 [
                     <p>Caminho de Dados Monociclo</p>,
-                    <img alt='caminho de dados monociclo' src='http://gec.di.uminho.pt/discip/TextoAC/Fig-12.12.gif'></img>
+                    <img alt='diagrama complexo ilustrando um caminho de dados de um processador monociclo' longdesc="" src='http://gec.di.uminho.pt/discip/TextoAC/Fig-12.12.gif'></img>
                 ] 
             },
             {
@@ -173,14 +173,14 @@ const contentData =
                 title: 'Caminho de Dados Pipeline',
                 content: 
                 [
-                    <img alt='caminho de dados pipeline' src='https://d2vlcm61l7u1fs.cloudfront.net/media%2Fb89%2Fb897b884-8969-46ae-be24-05d3dc5031d7%2FphpQftSqg.png'></img>,
+                    <img alt='diagrama complexo ilustrando um caminho de dados de um processador com arquitetura pipeline' src='https://d2vlcm61l7u1fs.cloudfront.net/media%2Fb89%2Fb897b884-8969-46ae-be24-05d3dc5031d7%2FphpQftSqg.png'></img>,
                 ]
             },
             {
                 title:'Execução do Pipeline',
                 content: 
                 [
-                    <img alt='execução do pipeline' src='https://upload.wikimedia.org/wikipedia/commons/4/46/Superscalarpipeline.svg'></img>
+                    <img alt='diagrama mostrando a execução de um pipeline. Nele, cada instrução é dividida em múltiplas etapas, as quais são executadas em paralelo. Ao iniciar uma instrução, a primeira etapa dela é empilhada; no próximo ciclo inicia a próxima etapa desta instrução e a primeira etapa de uma nova instrução, as quais executam em paralelo.' src='https://upload.wikimedia.org/wikipedia/commons/4/46/Superscalarpipeline.svg'></img>
                 ]
             },
             {
@@ -318,7 +318,7 @@ const contentData =
                     </ul>,
                     <p>Essas qualidades são, porem, além de impraticaveis, conflitantes, ou seja, uma memoria veloz é, normalmente, pequena e custosa. Para resolver esse problema,
                         usa-se a ideia de hierarquia de memoria, a imagem abaixo representa a pirâmide de hierarquia:</p>,
-                    <img alt="piramide de hierarquia de memoria" src='http://static.wixstatic.com/media/e720c6_25b41bfb2fbf403bbdff6dbf5bf19737~mv2.png/v1/fill/w_626,h_411/e720c6_25b41bfb2fbf403bbdff6dbf5bf19737~mv2.png' />,
+                    <img alt="imagem demonstrando a hierarquia. Conforme desce do topo da pirâmide a velocidade e o custo diminuem, enquanto a capacidade e o tamanho físico aumentam. No topo se encontram os registradores, seguidos da CPU Cache, RAM e, por fim, pelos dispositivos de Armazenamento em Massa." src='http://static.wixstatic.com/media/e720c6_25b41bfb2fbf403bbdff6dbf5bf19737~mv2.png/v1/fill/w_626,h_411/e720c6_25b41bfb2fbf403bbdff6dbf5bf19737~mv2.png' />,
                     <p>A ideia portanto é combinar memorias com diferentes propriedades a fim de se aproximar ao maximo da memória "ideal"</p>
                 ]
             },
