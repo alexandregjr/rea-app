@@ -9,11 +9,11 @@ $ git clone https://github.com/alexandregjr/rea-app
 $ cd rea-app
 ```
 
+É preciso ter instalado o node.js e o npm na máquina para rodar o projeto.
 Para que o repositório seja clonado para o computador e garantir que você está na pasta do repositório.
 
 ```console
-# apt-get install npm
-$ npm install create-react-app
+$ npm install 
 $ npm start
 ```
 
