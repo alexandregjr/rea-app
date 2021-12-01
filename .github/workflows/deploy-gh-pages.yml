@@ -7,7 +7,7 @@ on:
     branches: [ master ]
   
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -18,7 +18,7 @@ jobs:
         
       - name: Install & Build
         run: |
-          npm ci
+          npm i
           npm build
 
       - name: Deploy
