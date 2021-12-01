@@ -2,6 +2,7 @@
   "name": "rea-app",
   "version": "0.1.0",
   "private": true,
+   "homepage": "https://alexandregjr.github.io/rea-app",
   "dependencies": {
     "@djpfs/react-vlibras": "1.0.3",
     "create-react-app": "^4.0.3",
