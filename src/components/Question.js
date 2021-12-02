@@ -1,6 +1,10 @@
 import React from "react"
 import contentData from "../contentData"
 
+function getLabel(opt, id) {
+    return `Alternativa ${String.fromCharCode(65 + Number(id))}: ${opt.slice(2).trim()}`;
+}
+
 class Question extends React.Component{
 
     constructor(props){
@@ -39,23 +43,45 @@ class Question extends React.Component{
 
     makeButton(opt, id){
         const correct = this.questionData.answer.charCodeAt(0) - 65
-        const answerId = parseInt(this.state.answer)
-        if(id === correct) return(
-            <button className="correct" id={id} key={id} disabled>{opt}</button>
-        )
-        if(id === answerId) return(
-            <button className="wrong" id={id} key={id} disabled>{opt}</button>
-        )
+        const answerId = parseInt(this.state.answer);
+        const className = id === correct ? "correct" : id === answerId ? "wrong" : "none";
         return (
-            <button className="none" id={id} key={id} disabled>{opt}</button>
+            <button 
+                className={className} 
+                id={id} 
+                key={`${this.props.questionId}_${id}`}
+                aria-label={getLabel(opt, id)}
+                disabled
+            >
+                {opt}
+            </button>
         )
+        // if(id === correct) return(
+        //     <button className="correct" id={id} key={`${this.props.questionId}_${id}`} disabled>{opt}</button>
+        // )
+        // if(id === answerId) return(
+        //     <button className="wrong" id={id} key={`${this.props.questionId}_${id}`} disabled>{opt}</button>
+        // )
+        // return (
+        //     <button className="none" id={id} key={`${this.props.questionId}_${id}`} disabled>{opt}</button>
+        // )
     }
 
     render(){
+
         let ret = this.questionData.options.map((opt, id) => 
-            <button className="unanswered" onClick={this.onAnswerClick} id={id} key={id}>{opt}</button>
-        )
-        if (this.state.answer) ret = this.questionData.options.map((opt, id) => this.makeButton(opt, id))
+            <button 
+                className="unanswered" 
+                onClick={this.onAnswerClick}
+                id={`${this.props.questionId}_${id}`}
+                key={id}
+                aria-label={getLabel(opt, id)}
+            >
+                {opt}
+            </button>
+        );
+
+        if (this.state.answer) ret = this.questionData.options.map((opt, id) => this.makeButton(opt, id));
         
         return(
             <div className={'question'}>

@@ -9,7 +9,7 @@ function Navbar(props) {
     )
 
     return(
-        <ul>
+        <ul role="group" id="pages">
             {links}
         </ul>
     )

@@ -7,7 +7,7 @@ function Subject(props) {
     const subtopics = data.subtopics.map((topic, index) => (
         <div className={'subtopic'} key={index}>
             <h3 id={topic.title}><a href={`#${topic.title}`}>{topic.title}</a></h3>
-            {topic.content}
+            {topic.content.map((el, iid) => <React.Fragment key={`${props.from}_${index}_${iid}`}>{el}</React.Fragment>)}
         </div>
     ))
     
