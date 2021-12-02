@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1749d3f6c9ce39f8db57f06470f29461",
+    "revision": "e019e6a8fe54c2972b136afba41eac1d",
     "url": "/rea-app/index.html"
   },
   {
-    "revision": "43f84258235432f76f58",
+    "revision": "22ab6fde4e09f5e6f498",
     "url": "/rea-app/static/css/main.c85a33cf.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rea-app/static/js/2.4ba87778.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "43f84258235432f76f58",
-    "url": "/rea-app/static/js/main.420563ea.chunk.js"
+    "revision": "22ab6fde4e09f5e6f498",
+    "url": "/rea-app/static/js/main.dd32545e.chunk.js"
   },
   {
     "revision": "4d958eb922c636fba285",

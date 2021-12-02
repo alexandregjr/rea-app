@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rea-app/static/css/main.c85a33cf.chunk.css",
-    "main.js": "/rea-app/static/js/main.420563ea.chunk.js",
-    "main.js.map": "/rea-app/static/js/main.420563ea.chunk.js.map",
+    "main.js": "/rea-app/static/js/main.dd32545e.chunk.js",
+    "main.js.map": "/rea-app/static/js/main.dd32545e.chunk.js.map",
     "runtime-main.js": "/rea-app/static/js/runtime-main.f0349bca.js",
     "runtime-main.js.map": "/rea-app/static/js/runtime-main.f0349bca.js.map",
     "static/js/2.4ba87778.chunk.js": "/rea-app/static/js/2.4ba87778.chunk.js",
     "static/js/2.4ba87778.chunk.js.map": "/rea-app/static/js/2.4ba87778.chunk.js.map",
     "index.html": "/rea-app/index.html",
-    "precache-manifest.c9413b1972c35a1200bb328d937704e0.js": "/rea-app/precache-manifest.c9413b1972c35a1200bb328d937704e0.js",
+    "precache-manifest.4d13cccf7fa7b3a45eb7d6417bec4489.js": "/rea-app/precache-manifest.4d13cccf7fa7b3a45eb7d6417bec4489.js",
     "service-worker.js": "/rea-app/service-worker.js",
     "static/css/main.c85a33cf.chunk.css.map": "/rea-app/static/css/main.c85a33cf.chunk.css.map",
     "static/js/2.4ba87778.chunk.js.LICENSE.txt": "/rea-app/static/js/2.4ba87778.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f0349bca.js",
     "static/js/2.4ba87778.chunk.js",
     "static/css/main.c85a33cf.chunk.css",
-    "static/js/main.420563ea.chunk.js"
+    "static/js/main.dd32545e.chunk.js"
   ]
 }
