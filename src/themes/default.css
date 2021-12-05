@@ -16,23 +16,45 @@ div.content {
     margin: 0 auto;
 }
 
-header {
+div.default header {
     background-color: #2c3e50;
     color: #ffffff;
     padding: 20px
 }
 
-header h1 {
+div.default header h1 {
     word-break: break-all;
     padding: 10px;
     margin: 10px 0 
 }
 
-header h1 span {
+div.default header h1 span {
     word-break: normal;
 }
 
-header a {
+div.default header div.accessibility {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+div.default header div.accessibility button {
+    border: none;
+    background-color: #34495e;
+    color: black;
+    padding: 2px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+div.default header div.accessibility button img {
+    filter: invert(1)
+}
+
+div.default header a {
     display: inline-block;
     color: #ffffff;
     padding: 10px;
@@ -40,42 +62,42 @@ header a {
     transition: 0.2s;
 }
 
-header a:hover {
+div.default header a:hover {
     background: #34495e;
 }
 
-main {
+div.default main {
     margin: 20px 0
 }
 
-main h2 {
+div.default main h2 {
     padding: 10px 20px;
 }
 
-main h2 a {
+div.default main h2 a {
     color: #2c3e50;
 }
 
-main div.subtopic {
+div.default main div.subtopic {
     display: flex;
     flex-direction: column;
     margin: 0 0 20px
 }
 
-main div.subtopic h3 {
+div.default main div.subtopic h3 {
     padding: 10px 20px;
 }
 
-main div.subtopic h3 a {
+div.default main div.subtopic h3 a {
     color: #34495e;
 }
 
-main div.subtopic p {
+div.default main div.subtopic p {
     padding: 5px 20px;
     text-align: justify
 }
 
-main div.subtopic ul {
+div.default main div.subtopic ul {
     margin: 20px;
     padding: 20px;
     list-style-position: inside;
@@ -83,12 +105,12 @@ main div.subtopic ul {
     border-radius: 5px
 }
 
-main div.subtopic img {
+div.default main div.subtopic img {
     margin: 0 auto;
     max-width: 90%;
 }
 
-main div.subtopic pre {
+div.default main div.subtopic pre {
     word-break: break-all;
     font-family: 'Roboto Mono', monospace;
     background-color: #ecf0f1;
@@ -98,35 +120,35 @@ main div.subtopic pre {
     border-radius: 3px;
 }
 
-main ul li {
+div.default main ul li {
     padding: 5px 0 5px 10px
 }
 
-main div.exercise {
+div.default main div.exercise {
     margin: 20px 0;
     background-color: #2c3e50;
     border-radius: 3px;
     padding: 20px;
 }
 
-main div.exercise h2 {
+div.default main div.exercise h2 {
     color: #ffffff;
     padding: 10px 10px 0;
 }
 
-main div.exercise h3 {
+div.default main div.exercise h3 {
     color: #ffffff;
     padding: 10px;
     flex: 1 0 100%;
 }
 
-main div.exercise div.question {
+div.default main div.exercise div.question {
     padding: 10px 0;
     display: flex;
     flex-wrap: wrap
 }
 
-main div.exercise div.question button {
+div.default main div.exercise div.question button {
     min-width: min(80vw, 200px);
     flex: 1 0 40%;
     margin: 10px;
@@ -140,34 +162,34 @@ main div.exercise div.question button {
     color: #000000;
 }
 
-main div.exercise div.question button:hover, main div.exercise div.question button:focus, main div.exercise div.question button:active {
-    box-shadow: 0 0 0 5px #BEC7CD;
+div.default main div.exercise div.question button.unanswered:hover, main div.exercise div.question button.unanswered:focus, main div.exercise div.question button.unanswered:active {
+    box-shadow: 0 0 0 2px #34495e, 0 0 0 5px #BEC7CD;
 }
 
-main div.exercise div.question button.unanswered {
+div.default main div.exercise div.question button.unanswered {
     cursor: pointer;
 }
 
-main div.exercise div.question button.wrong {
+div.default main div.exercise div.question button.wrong {
     box-shadow: 0 0 0 3px #e74c3c;
 }
 
-main div.exercise div.question button.correct {
+div.default main div.exercise div.question button.correct {
     box-shadow: 0 0 0 3px #2ecc71;
 }
 
-main div.exercise div.question button.unanswered:hover {
+div.default main div.exercise div.question button.unanswered:hover {
     background-color: #ecf0f1;
 }
 
-main div.exercise div.answered {
+div.default main div.exercise div.answered {
     display: flex;
     flex: 1 0 100%;
     flex-wrap: wrap;
     margin: 30px 0 0;
 }
 
-main div.exercise div.answered p {
+div.default main div.exercise div.answered p {
     background-color: #34495e;
     padding: 20px;
     margin: 10px;
@@ -176,29 +198,29 @@ main div.exercise div.answered p {
     border-radius: 3px
 }
 
-main div.exercise div.answered button.reset {
+div.default main div.exercise div.answered button.reset {
     background-color: #e74c3c
 }
 
-main div.exercise div.answered button {
+div.default main div.exercise div.answered button {
     background-color:#1abc9c;
     color: white;
     cursor: pointer;
 }
 
-main div.exercise div.answered button:hover {
+div.default main div.exercise div.answered button:hover {
     background-color: #16a085;
 }
 
-main div.exercise div.answered button.reset:hover {
+div.default main div.exercise div.answered button.reset:hover {
     background-color: #c0392b;
 }
 
-footer {
+div.default footer {
     text-align: center;
     margin: 30px
 }
 
-footer p {
+div.default footer p {
     padding: 5px;
 }

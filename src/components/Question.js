@@ -43,13 +43,13 @@ class Question extends React.Component{
 
     makeButton(opt, id){
         const correct = this.questionData.answer.charCodeAt(0) - 65
-        const answerId = parseInt(this.state.answer);
+        const answerId = parseInt(this.state.answer.split('_')[1]);
         const className = id === correct ? "correct" : id === answerId ? "wrong" : "none";
         return (
             <button 
                 className={className} 
-                id={id} 
-                key={`${this.props.questionId}_${id}`}
+                id={`${this.props.questionId}_${id}`} 
+                key={id}
                 aria-label={getLabel(opt, id)}
                 disabled
             >
