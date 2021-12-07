@@ -15,12 +15,12 @@ function Header({ selector, theme }) {
 
     return(
         <header>
-            <div style = {{position: pos, zIndex:'1', padding:"15px 0 0 15px"}} accesskey="0" onClick={()=>{setClick(!click); setPosition(pos == "absolute" ? "fixed" : "absolute")}}>
+            <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}} accesskey="0" onClick={()=>{setClick(!click); setPosition(pos == "absolute" ? "fixed" : "absolute")}}>
                 <img src={accImg} style={{ height: "3rem", width:"3rem"}}/>                    
                 <small>[0]</small>
             </div>
 
-            <Menu click={click}/>
+            <Menu click={click} toggleTheme={selector} theme={theme} />
             <div className={'content'}>
                 <h1>{Array.from("AGPJEPLGAJTMS").sort().join('')} <span>Estudos</span></h1>
                 <Navbar topics={titles}/>

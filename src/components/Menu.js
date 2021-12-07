@@ -8,7 +8,6 @@ import menos from '../menos.png'
 export default function Menu ({click, toggleTheme, theme }) {
 
   const [display, setDisplay] = useState('none')
-  const [contraste, setConstrast] = useState('Alto')
 
   return <div className="menu" style={{ display: click ? "block" : "none" }}>
     <h1 style={{marginTop: "15px", marginLeft:"calc(3rem + 15px)", paddingTop:"5px"}}>Menu</h1>
@@ -32,7 +31,7 @@ export default function Menu ({click, toggleTheme, theme }) {
     <hr/>    
     <div style={{display:'inline-flex', padding:"15px"}} accesskey="6" onClick={toggleTheme}>
       <img src={contrast} style={{height: "2.25rem", width:"2.25rem"}}/>
-      <h3 style={{padding:"5px 0 0px 15px"}}> {contraste} contraste </h3>
+      <h3 style={{padding:"5px 0 0px 15px"}}> {theme === "default" ? "Alto" : "Baixo"} contraste </h3>
       <small style={{padding:"15px 0 0px 5px"}}> [6]</small>  
     </div>
     <hr/>  
