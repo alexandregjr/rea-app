@@ -4,7 +4,7 @@ import contentData from '../contentData'
 import menu from '../menu.png'
 import Menu from './Menu';
 
-function Header(props) {
+function Header({ selector }) {
     const titles = contentData.map((topic) => (
         {title: topic.title}
     ))
@@ -16,6 +16,9 @@ function Header(props) {
             <div className={'content'}>
                 <h1>{Array.from("AGPJEPLGAJTMS").sort().join('')} <span>Estudos</span></h1>
                 <Navbar topics={titles}/>
+                <div className="accessibility">
+                    <button onClick={selector}><img src="https://www.sendiass4bcp.org/siteelements/images/icons/highcontrast.png" alt="Figura de uma luz, indicando alteração de Modo de Contraste" width="40"/></button>
+                </div>
             </div>
         </header>
     )

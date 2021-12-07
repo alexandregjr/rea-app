@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.content {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div.high-contrast header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px
+}
+
+div.high-contrast header h1 {
+    word-break: break-all;
+    padding: 10px;
+    margin: 10px 0 
+}
+
+div.high-contrast header h1 span {
+    word-break: normal;
+}
+
+div.high-contrast header div.accessibility {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+div.high-contrast header div.accessibility button {
+    border: none;
+    background-color: #ffffff;
+    color: black;
+    padding: 2px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+div.high-contrast header a {
+    display: inline-block;
+    color: #ffffff;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+div.high-contrast header a:hover, div.high-contrast header a:focus, div.high-contrast header a:active {
+    background: #ffffff;
+    color: #000000;
+}
+
+div.high-contrast main {
+    margin: 20px 0
+}
+
+div.high-contrast main h2 {
+    padding: 10px 20px;
+}
+
+div.high-contrast main h2 a {
+    color: #000000;
+}
+
+div.high-contrast main div.subtopic {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px
+}
+
+div.high-contrast main div.subtopic h3 {
+    padding: 10px 20px;
+}
+
+div.high-contrast main div.subtopic h3 a {
+    color: #222222;
+}
+
+div.high-contrast main div.subtopic p {
+    padding: 5px 20px;
+    text-align: justify
+}
+
+div.high-contrast main div.subtopic ul {
+    margin: 20px;
+    padding: 20px;
+    list-style-position: inside;
+    background-color: #efefef;
+    border-radius: 5px
+}
+
+div.high-contrast main div.subtopic img {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+div.high-contrast main div.subtopic pre {
+    word-break: break-all;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #efefef;
+    padding: 20px;
+    white-space: pre-wrap;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+div.high-contrast main ul li {
+    padding: 5px 0 5px 10px
+}
+
+div.high-contrast main div.exercise {
+    margin: 20px 0;
+    background-color: #000000;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+div.high-contrast main div.exercise h2 {
+    color: #ffffff;
+    padding: 10px 10px 0;
+}
+
+div.high-contrast main div.exercise h3 {
+    color: #ffffff;
+    padding: 10px;
+    flex: 1 0 100%;
+}
+
+div.high-contrast main div.exercise div.question {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap
+}
+
+div.high-contrast main div.exercise div.question button {
+    min-width: min(80vw, 200px);
+    flex: 1 0 40%;
+    margin: 10px;
+    min-height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #ffffff;
+    transition: 0.2s;
+    outline: none;
+    color: #000000;
+}
+
+div.high-contrast main div.exercise div.question button.unanswered:hover, main div.exercise div.question button.unanswered:focus, main div.exercise div.question button.unanswered:active {
+    box-shadow: 0 0 0 2px #000000, 0 0 0 5px #BEC7CD;
+}
+
+
+div.high-contrast main div.exercise div.question button.unanswered {
+    cursor: pointer;
+}
+
+div.high-contrast main div.exercise div.question button.wrong {
+    box-shadow: 0 0 0 2px #000000, 0 0 0 5px #ffffff;
+}
+
+div.high-contrast main div.exercise div.question button.correct {
+    box-shadow: 0 0 0 2px #000000, 0 0 0 5px #87E911;
+}
+
+/* div.high-contrast main div.exercise div.question button.unanswered:hover {
+    background-color: #efefef;
+} */
+
+div.high-contrast main div.exercise div.answered {
+    display: flex;
+    flex: 1 0 100%;
+    flex-wrap: wrap;
+    margin: 30px 0 0;
+}
+
+div.high-contrast main div.exercise div.answered p {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    color: #000000;
+    flex: 1 0 80%;
+    border-radius: 3px
+}
+
+div.high-contrast main div.exercise div.answered button.reset {
+    background-color: #000000;
+    color:#ffffff;
+    border: solid 3px #ffffff;
+    font-weight: bold;
+}
+
+div.high-contrast main div.exercise div.answered button {
+    background-color:#87E911;
+    color: black;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* div.high-contrast main div.exercise div.answered button:hover {
+    background-color: #6bb116;
+}
+
+div.high-contrast main div.exercise div.answered button.reset:hover {
+    background-color: #aa1b3a;
+} */
+
+div.high-contrast footer {
+    text-align: center;
+    margin: 30px
+}
+
+div.high-contrast footer p {
+    padding: 5px;
+}
