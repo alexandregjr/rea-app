@@ -188,7 +188,13 @@ div.high-contrast main div.exercise div.question button {
     font-size: 1em;
 }
 
-div.high-contrast main div.exercise div.question button.unanswered:hover, main div.exercise div.question button.unanswered:focus, main div.exercise div.question button.unanswered:active {
+div.high-contrast main div.exercise div.question button.unanswered:hover, 
+div.high-contrast main div.exercise div.question button.explain:hover, 
+div.high-contrast main div.exercise div.question button.reset:hover,
+div.high-contrast main div.exercise div.question div.answered button.explain:focus, 
+div.high-contrast main div.exercise div.question div.answered button.reset:focus,
+div.high-contrast main div.exercise div.question button.unanswered:focus, 
+div.high-contrast main div.exercise div.question button.unanswered:active {
     box-shadow: 0 0 0 2px #000000, 0 0 0 5px #BEC7CD;
 }
 

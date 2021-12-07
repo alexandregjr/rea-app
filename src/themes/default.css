@@ -190,7 +190,13 @@ div.default main div.exercise div.question button {
     font-size: 1em;
 }
 
-div.default main div.exercise div.question button.unanswered:hover, main div.exercise div.question button.unanswered:focus, main div.exercise div.question button.unanswered:active {
+div.default main div.exercise div.question button.unanswered:hover, 
+div.default main div.exercise div.question div.answered button.explain:hover, 
+div.default main div.exercise div.question div.answered button.reset:hover,
+div.default main div.exercise div.question div.answered button.explain:focus, 
+div.default main div.exercise div.question div.answered button.reset:focus,
+div.default main div.exercise div.question button.unanswered:focus, 
+div.default main div.exercise div.question button.unanswered:active {
     box-shadow: 0 0 0 2px #34495e, 0 0 0 5px #BEC7CD;
 }
 

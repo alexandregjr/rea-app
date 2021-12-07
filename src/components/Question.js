@@ -91,9 +91,9 @@ class Question extends React.Component{
                 <div className={'answered'}>
                     <button className={'reset'} onClick={this.onResetClick}>Tentar novamente</button>
                     {this.state.explain && 
-                    <button onClick={this.onExplainClick}>Esconder explicação</button>}
+                    <button className="explain" onClick={this.onExplainClick}>Esconder explicação</button>}
                     {!this.state.explain && 
-                    <button onClick={this.onExplainClick}>Mostrar explicação</button>}
+                    <button className="explain" onClick={this.onExplainClick}>Mostrar explicação</button>}
                     {this.state.explain && 
                     <p>{this.questionData.explanation}</p>}
                 </div>}
