@@ -20,14 +20,14 @@ const contentData =
                     <p>A estrutura de um programa assembly possui o segmento de dados, onde são declaradas as variáveis, e o segmento de texto onde há o código fonte.</p>,
                     <p>São usados rótulos para identificar uma linha de código, e esse rótulo pode ser utilizado posteriormente, em desvos e chamadas de procedimento para voltar à essa linha.</p>,
                     <p>Além disso, o assembly MIPS conta com diretivas do montado para determinar configurações ao código, como alinhamento (.aling), se uma dada variável é string (.ascii) entre outros.</p>,
-                    <p>O montador chama o sistema para realizar operações de escrita na tela e leitura do teclado, além de indicar término do pragrama, através do comando syscall</p>
+                    <p>O montador chama o sistema para realizar operações de escrita na tela e leitura do teclado, além de indicar término do programa, através do comando syscall</p>
                 ]
             },
             {
                 title: 'Memória',
                 content:
                 [
-                    <p>A memória do MIPS é divida em três partes: o segmmento de texto, que armazena as instruções do programa, o segmento de dados, que reserva espaço para "variáveis"(dados que podem ser estáticos ou dinâmicos), e o segmento de pilha, que é uma pilha onde pode-se empilhar dados durante o programa para uso posterior</p>
+                    <p>A memória do MIPS é divida em três partes: o segmmento de texto, que armazena as instruções do programa, o segmento de dados, que reserva espaço para "variáveis" (dados que podem ser estáticos ou dinâmicos), e o segmento de pilha, que é uma pilha onde pode-se empilhar dados durante o programa para uso posterior</p>
                 ]
             },
             {
@@ -48,7 +48,7 @@ const contentData =
                 title: 'ISA',
                 content:
                 [
-                    <p>ISA, Instruction Set Architecture, é o conjunto de instruções (código de máquina) representados através de minemônicos. O MIPS possui instruções aritméticas, lógicas, de uso da memória, de controle de fluxo e comparações, separadas em 3 tipos: Tipo R (register), que evolve registrador-registrador, Tipo I(immediate), que envolve um valor imadiato, e Tipo J(jump), de desvio</p>
+                    <p>ISA, Instruction Set Architecture, é o conjunto de instruções (código de máquina) representados através de minemônicos. O MIPS possui instruções aritméticas, lógicas, de uso da memória, de controle de fluxo e comparações, separadas em 3 tipos: Tipo R (register), que evolve registrador-registrador, Tipo I (immediate), que envolve um valor imadiato, e Tipo J (jump), de desvio</p>
                 ]
             }
         ],
@@ -76,7 +76,7 @@ const contentData =
                     'D) Efetua um procedimento'
                 ],
                 answer: 'A',
-                explanation: 'As diretivas não são instruções, elas são destinadas ao assembler(montador) que as utiliza para saber de que maneira ele deve montar o arquivo executável.'
+                explanation: 'As diretivas não são instruções, elas são destinadas ao assembler (montador) que as utiliza para saber de que maneira ele deve montar o arquivo executável.'
             },
             {
                 question: 'Questao 3: Qual o tipo da instrução jr?',
@@ -144,11 +144,11 @@ const contentData =
                 content:
                 [
                     <ul>
-                        <li>Busca da instrução na memória.(IF)</li>
-                        <li>Leitura dos registradores enquanto a instrução é decodificada.(ID)</li>
-                        <li>Execução de uma operação/cálculo de um endereço.(EX)</li>
+                        <li>Busca da instrução na memória. (IF)</li>
+                        <li>Leitura dos registradores enquanto a instrução é decodificada. (ID)</li>
+                        <li>Execução de uma operação/cálculo de um endereço. (EX)</li>
                         <li>Acesso à memória.(MEM)</li>
-                        <li>Escrita do resultado em um registrador.(WB)</li>
+                        <li>Escrita do resultado em um registrador. (WB)</li>
                     </ul>
                 ]
 
@@ -216,7 +216,7 @@ const contentData =
                             <li>Dependência de Saída: WAW (Write After Write). Ocorre quando há uma escrita após um escrita em um operando</li>
                         </ul>
                 </ul>,
-                <p>As dependências falsas não afetam o pipeline, mas a verdadeira sim, e para resolvê-lo pode-se parar o pipeline durante um certo número de ciclos(inserindo nop), reeordenar o código ou adiantar os dados(pegando o dado nos registradores internos do pipeline),com técnica chamada fowarding, quando a instrução que contém o dado desejado está após o EX e a instrução que deseja o dado está após o ID. </p>
+                <p>As dependências falsas não afetam o pipeline, mas a verdadeira sim, e para resolvê-lo pode-se parar o pipeline durante um certo número de ciclos (inserindo nop), reeordenar o código ou adiantar os dados (pegando o dado nos registradores internos do pipeline),com técnica chamada fowarding, quando a instrução que contém o dado desejado está após o EX e a instrução que deseja o dado está após o ID. </p>
                 ]
             },
             {
