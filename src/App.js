@@ -16,13 +16,14 @@ const nextTheme = {
 
 function App() {
   const [theme , setTheme ] = useLocalStorage("theme", "default") //useLocalStorage("theme", "default")
+  const [curSize, setCurSize] = React.useState(1);
 
   const toggleTheme = React.useMemo(() => () => setTheme(nextTheme[theme]), [theme, setTheme]);
 
   return (
-    <div className={`${theme}`}>
+    <div className={`${theme}`} style={{ fontSize: `${curSize}rem` }}>
       <BrowserRouter>
-        <Header selector={toggleTheme} theme={theme} />
+        <Header selector={toggleTheme} theme={theme} increaseFontSize={() => setCurSize(last => last + 0.2)} decreaseFontSize={() => setCurSize(last => last - 0.2)} />
         <VLibras />
         <Switch>
           <Route exact path='/topic/:id' component={Content} />

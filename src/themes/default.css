@@ -187,6 +187,7 @@ div.default main div.exercise div.question button {
     transition: 0.2s;
     outline: none;
     color: #000000;
+    font-size: 1em;
 }
 
 div.default main div.exercise div.question button.unanswered:hover, main div.exercise div.question button.unanswered:focus, main div.exercise div.question button.unanswered:active {

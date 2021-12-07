@@ -5,7 +5,7 @@ import mais from '../mais.png'
 import menos from '../menos.png'
 
 
-export default function Menu ({click, toggleTheme, theme, onClose }) {
+export default function Menu ({click, toggleTheme, theme, onClose, increaseFontSize, decreaseFontSize }) {
 
   const [display, setDisplay] = useState('none');
 
@@ -20,13 +20,13 @@ export default function Menu ({click, toggleTheme, theme, onClose }) {
           <h3 style={{padding:"5px 0 0px 15px"}}> Fonte </h3>
         </div>    
         <div style={{paddingLeft: "calc(2.25rem + 15px)", display: display}}>
-          <div style={{display:'inline-flex'}}>
-            <img src={mais} style={{height: "1.5rem", width:"1.5rem"}}/>
+          <div style={{display:'inline-flex'}} onClick={increaseFontSize} >
+            <img src={mais} style={{height: "1.5rem", width:"1.5rem"}} />
             <h4>Aumentar</h4>
           </div>
           <br/>
-          <div style={{display:'inline-flex'}}>
-            <img src={menos} style={{height: "1.5rem", width:"1.5rem"}}/>
+          <div style={{display:'inline-flex'}} onClick={decreaseFontSize}>
+            <img src={menos} style={{height: "1.5rem", width:"1.5rem"}} />
             <h4>Diminuir</h4>
           </div>
         </div>
