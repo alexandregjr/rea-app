@@ -23,7 +23,7 @@ function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
                     <a href="#exercise" accessKey="2" >Exercício[2]</a>
                 </li>
                 <li>
-                    <a href="#footer" accessKey="3" >Rodapé[3]</a>
+                    <a href="#root" accessKey="3" >Topo[3]</a>
                 </li>
             </ul>
             <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}} onClick={()=>{setClick(!click); setPosition(pos === "absolute" ? "fixed" : "absolute")}}>
