@@ -9,21 +9,20 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import "./themes/default.css"
 import "./themes/high-contrast.css"
 
-function App() {
-  const toggleTheme = () => {
-    if (theme === "high-contrast") {
-        setTheme("default")
-    } else if (theme === "default") {
-        setTheme("high-contrast")
-    }
-  }
+const nextTheme = {
+  "default": "high-contrast" ,
+  "high-contrast" : "default"
+};
 
+function App() {
   const [theme , setTheme ] = useLocalStorage("theme", "default") //useLocalStorage("theme", "default")
-  
+
+  const toggleTheme = React.useMemo(() => () => setTheme(nextTheme[theme]), [theme, setTheme]);
+
   return (
     <div className={`${theme}`}>
       <BrowserRouter>
-        <Header selector={toggleTheme} />
+        <Header selector={toggleTheme} theme={theme} />
         <VLibras />
         <Switch>
           <Route exact path='/topic/:id' component={Content} />
