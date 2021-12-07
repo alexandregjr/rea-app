@@ -20,8 +20,17 @@ div.content {
 div.high-contrast header {
     background-color: #000000;
     color: #ffffff;
-    padding: 20px
+    display: flex;
 }
+
+div.high-contrast .menu {
+    position: absolute;
+    height: 100vh; 
+    width: max(20vw, 300px); 
+    background-color: #000000;
+    z-index: 10;
+}
+
 
 div.high-contrast header h1 {
     word-break: break-all;
