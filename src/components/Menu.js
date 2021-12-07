@@ -14,8 +14,9 @@ export default function Menu ({click, toggleTheme, theme }) {
     <h1 style={{marginTop: "15px", marginLeft:"calc(3rem + 15px)", paddingTop:"5px"}}>Menu</h1>
     <hr/>
     <div style={{display:'inline-flex', padding:"15px"}} onClick={()=>{setDisplay(display == "block" ? "none" : "block")}}>
-      <img src={font} style={{height: "2.25rem", width:"2.25rem"}}/>
-      <h3 style={{padding:"5px 0 0px 15px"}}> Fonte</h3>
+      <img src={font} style={{height: "2.25rem", width:"2.25rem"}} accesskey="5"/>
+      <h3 style={{padding:"5px 0 0px 15px"}}> Fonte </h3>
+      <small style={{padding:"15px 0 0px 5px"}}> [5]</small>
     </div>    
     <div style={{paddingLeft: "calc(2.25rem + 15px)", display: display}}>
       <div style={{display:'inline-flex'}}>
@@ -29,9 +30,10 @@ export default function Menu ({click, toggleTheme, theme }) {
       </div>
     </div>
     <hr/>    
-    <div style={{display:'inline-flex', padding:"15px"}} onClick={toggleTheme}>
+    <div style={{display:'inline-flex', padding:"15px"}} accesskey="6" onClick={toggleTheme}>
       <img src={contrast} style={{height: "2.25rem", width:"2.25rem"}}/>
-      <h3 style={{padding:"5px 0 0px 15px"}}> {theme === "default" ? "Alto" : "Baixo"} contraste</h3>  
+      <h3 style={{padding:"5px 0 0px 15px"}}> {contraste} contraste </h3>
+      <small style={{padding:"15px 0 0px 5px"}}> [6]</small>  
     </div>
     <hr/>  
   </div>
