@@ -11,6 +11,15 @@ a {
     text-decoration: none;
 }
 
+button.nullButton {
+    padding:5px 0 0px 15px;
+    background: none;
+    border: none; 
+    color: white;
+    display: flex;
+    font-size: 1em;
+}
+
 div.content {
     max-width: 900px;
     margin: 0 auto;
@@ -45,7 +54,7 @@ div.high-contrast .acc-navbar {
     flex-wrap: wrap;
     align-items: center;
     list-style: none;
-    z-index: 10;
+    z-index: 5;
 }
 
 

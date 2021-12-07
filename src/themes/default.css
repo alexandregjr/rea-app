@@ -11,6 +11,14 @@ a {
     text-decoration: none;
 }
 
+button.nullButton {
+    padding:5px 0 0px 15px;
+    background: none;
+    border: none; 
+    color: white;
+    display: flex;
+}
+
 div.content {
     max-width: 900px;
     margin: 0 auto;
@@ -40,7 +48,7 @@ div.default .acc-navbar {
     flex-wrap: wrap;
     align-items: center;
     list-style: none;
-    z-index: 10;
+    z-index: 5;
 }
 
 div.default header div.content ul {

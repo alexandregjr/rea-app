@@ -13,8 +13,24 @@ function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
     const [click, setClick] = useState(false);
     const [pos, setPosition] = useState("absolute");
 
+    const showMenu = () => { setClick(!click); setPosition(pos === "absolute" ? "fixed" : "absolute"); };
     return(
         <header>
+            <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}}>
+                <button style = {{background: "none", border: "none"}} onClick={showMenu}>
+                    <img src={accImg} style={{ height: "3rem", width:"3rem"}}/>
+                </button>
+            </div>
+            
+            <Menu 
+                click={click} 
+                toggleTheme={selector} 
+                theme={theme} 
+                onClose={() => { setClick(false); setPosition("absolute"); }} 
+                increaseFontSize={increaseFontSize}   
+                decreaseFontSize={decreaseFontSize}
+            />
+            
             <ul className="acc-navbar">
                 <li>
                     <a href="#content" accessKey="1" >Explicação[1]</a>
@@ -26,18 +42,7 @@ function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
                     <a href="#root" accessKey="3" >Topo[3]</a>
                 </li>
             </ul>
-            <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}} onClick={()=>{setClick(!click); setPosition(pos === "absolute" ? "fixed" : "absolute")}}>
-                <img src={accImg} style={{ height: "3rem", width:"3rem"}}/>
-            </div>
 
-            <Menu 
-                click={click} 
-                toggleTheme={selector} 
-                theme={theme} 
-                onClose={() => { setClick(false); setPosition("absolute"); }} 
-                increaseFontSize={increaseFontSize}   
-                decreaseFontSize={decreaseFontSize}
-            />
             <div className={'content'}>
                 <h1>AAEGGJJLMPPST <span>Estudos</span></h1>
                 <Navbar topics={titles}/>
