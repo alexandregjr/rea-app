@@ -23,6 +23,11 @@ div.high-contrast header {
     display: flex;
 }
 
+div.high-contrast header div.content ul {
+    display: flex;
+    list-style: none;
+}
+
 div.high-contrast .menu {
     position: fixed;
     height: 100vh; 

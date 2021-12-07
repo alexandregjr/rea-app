@@ -158,7 +158,7 @@ const contentData =
                 content:
                 [
                     <p>Caminho de Dados Monociclo</p>,
-                    <img alt='diagrama complexo ilustrando um caminho de dados de um processador monociclo' longdesc="" src='http://gec.di.uminho.pt/discip/TextoAC/Fig-12.12.gif'></img>
+                    <img alt='diagrama complexo ilustrando um caminho de dados de um processador monociclo' src='http://gec.di.uminho.pt/discip/TextoAC/Fig-12.12.gif'></img>
                 ] 
             },
             {

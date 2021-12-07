@@ -1,19 +1,21 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Navbar(props) {
-    const links = props.topics.map((topic, index) =>         
-        <Link to={'/topic/' + (index + 1)} key={index}>
-            {topic.title}
-        </Link>
-    )
+    const links = props.topics.map((topic, index) => 
+        <li key={index}>
+            <Link to={'/rea-app/topic/' + (index + 1)}>
+                {topic.title}
+            </Link>
+        </li>        
+    );
 
     return(
-        <ul role="group" id="pages">
+        <ul id="pages">
             {links}
         </ul>
-    )
+    );
     
 }
 
-export default Navbar
+export default Navbar;

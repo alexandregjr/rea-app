@@ -39,7 +39,7 @@ function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
                 decreaseFontSize={decreaseFontSize}
             />
             <div className={'content'}>
-                <h1>{Array.from("AGPJEPLGAJTMS").sort().join('')} <span>Estudos</span></h1>
+                <h1>AAEGGJJLMPPST <span>Estudos</span></h1>
                 <Navbar topics={titles}/>
                 {/* <div className="accessibility">
                     <button onClick={selector}><img src="https://www.sendiass4bcp.org/siteelements/images/icons/highcontrast.png" alt="Figura de uma luz, indicando alteração de Modo de Contraste" width="40"/></button>

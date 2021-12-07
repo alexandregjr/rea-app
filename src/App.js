@@ -4,7 +4,7 @@ import Content from './components/Content'
 import Footer from './components/Footer'
 import { useLocalStorage } from 'use-hooks'
 import VLibras from '@djpfs/react-vlibras'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 
 import "./themes/default.css"
 import "./themes/high-contrast.css"
@@ -26,8 +26,9 @@ function App() {
         <Header selector={toggleTheme} theme={theme} increaseFontSize={() => setCurSize(last => last + 0.2)} decreaseFontSize={() => setCurSize(last => last - 0.2)} />
         <VLibras />
         <Switch>
-          <Route exact path='/topic/:id' component={Content} />
-          <Route path='/' component={Content} />
+          <Route exact path='/rea-app/topic/:id' component={Content} />
+          <Route exact path='/rea-app/' component={Content} />
+          <Redirect to="/rea-app/" />
         </Switch>
         <Footer />
       </BrowserRouter>

@@ -43,6 +43,11 @@ div.default .acc-navbar {
     z-index: 10;
 }
 
+div.default header div.content ul {
+    display: flex;
+    list-style: none;
+}
+
 div.default header h1 {
     word-break: break-all;
     padding: 10px;
@@ -129,7 +134,7 @@ div.default main div.subtopic ul {
     padding: 20px;
     list-style-position: inside;
     background-color: #ecf0f1;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 div.default main div.subtopic img {
