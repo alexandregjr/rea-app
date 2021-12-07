@@ -11,7 +11,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^4.0.3",
-    "use-hooks": "*"
+    "use-hooks": "^2.0.0-rc.5"
   },
   "scripts": {
     "start": "react-scripts start",
