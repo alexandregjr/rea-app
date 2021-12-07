@@ -11,13 +11,11 @@ function Header(props) {
     const [click, setClick] = useState(false);
     return(
         <header>
+            <img src={menu} style={{zIndex:'1', height: "3rem", width:"3rem", padding:"15px 0 0 15px" }} onClick={()=>{setClick(!click)}} />                    
+            <Menu click={click}/>
             <div className={'content'}>
-                <div style={{display:"inline-flex"}}>
-                    <img src={menu} style={{zIndex:'1', height: "3rem", width:"3rem", paddingTop:"0.75rem" }} onClick={()=>{setClick(!click)}} />
-                    <Menu click={click}/>
-                    <h1>{Array.from("AGPJEPLGAJTMS").sort().join('')} <span>Estudos</span></h1>
-                </div>
-                <Navbar topics={titles} click={click} />
+                <h1>{Array.from("AGPJEPLGAJTMS").sort().join('')} <span>Estudos</span></h1>
+                <Navbar topics={titles}/>
             </div>
         </header>
     )
