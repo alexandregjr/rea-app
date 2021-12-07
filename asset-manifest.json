@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/rea-app/static/css/main.034ea64f.chunk.css",
-    "main.js": "/rea-app/static/js/main.8614e1b5.chunk.js",
-    "main.js.map": "/rea-app/static/js/main.8614e1b5.chunk.js.map",
+    "main.css": "/rea-app/static/css/main.4823e215.chunk.css",
+    "main.js": "/rea-app/static/js/main.0e92248a.chunk.js",
+    "main.js.map": "/rea-app/static/js/main.0e92248a.chunk.js.map",
     "runtime-main.js": "/rea-app/static/js/runtime-main.a34e1c81.js",
     "runtime-main.js.map": "/rea-app/static/js/runtime-main.a34e1c81.js.map",
     "static/js/2.c8fe672e.chunk.js": "/rea-app/static/js/2.c8fe672e.chunk.js",
     "static/js/2.c8fe672e.chunk.js.map": "/rea-app/static/js/2.c8fe672e.chunk.js.map",
     "index.html": "/rea-app/index.html",
-    "static/css/main.034ea64f.chunk.css.map": "/rea-app/static/css/main.034ea64f.chunk.css.map",
+    "static/css/main.4823e215.chunk.css.map": "/rea-app/static/css/main.4823e215.chunk.css.map",
     "static/js/2.c8fe672e.chunk.js.LICENSE.txt": "/rea-app/static/js/2.c8fe672e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a34e1c81.js",
     "static/js/2.c8fe672e.chunk.js",
-    "static/css/main.034ea64f.chunk.css",
-    "static/js/main.8614e1b5.chunk.js"
+    "static/css/main.4823e215.chunk.css",
+    "static/js/main.0e92248a.chunk.js"
   ]
 }
