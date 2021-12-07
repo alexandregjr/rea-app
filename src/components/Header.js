@@ -18,7 +18,7 @@ function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
         <header>
             <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}}>
                 <button style = {{background: "none", border: "none"}} onClick={showMenu}>
-                    <img src={accImg} style={{ height: "3rem", width:"3rem"}}/>
+                    <img  alt="icone de pessoa em uma cadeira rolante, indicando acessibilidade" src={accImg} style={{ height: "3rem", width:"3rem"}}/>
                 </button>
             </div>
             

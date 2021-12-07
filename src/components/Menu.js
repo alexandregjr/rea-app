@@ -17,21 +17,21 @@ export default function Menu ({click, toggleTheme, theme, onClose, increaseFontS
         <hr/>
         <div style={{display:'inline-flex', padding:"15px"}} onClick={()=>{setDisplay(display === "block" ? "none" : "block")}}>
           <button className="nullButton"> 
-            <img src={font} style={{height: "2.25rem", width:"2.25rem"}}/>
+            <img alt="icone com duas letras T, uma pequena e outra grande, indicando modificações no tamanho da fonte" src={font} style={{height: "2.25rem", width:"2.25rem"}}/>
             <h3>Fonte</h3>
           </button>
         </div>    
         <div style={{paddingLeft: "calc(2.25rem + 15px)", display: display}}>
           <div style={{display:'inline-flex'}} onClick={increaseFontSize}>
             <button className="nullButton" style={{fontSize: "0.8em"}}>
-              <img src={mais} style={{height: "1.5rem", width:"1.5rem"}} />
+              <img alt="icone de mais, indicando aumento da fonte" src={mais} style={{height: "1.5rem", width:"1.5rem"}} />
               <h4>Aumentar</h4>
             </button>
           </div>
           <br/>
           <div style={{display:'inline-flex'}} onClick={decreaseFontSize}>
             <button className="nullButton" style={{fontSize: "0.8em"}}>
-              <img src={menos} style={{height: "1.5rem", width:"1.5rem"}} />
+              <img alt="icone de menos, indicando diminuição da fonte" src={menos} style={{height: "1.5rem", width:"1.5rem"}} />
               <h4>Diminuir</h4>
             </button>
           </div>
@@ -39,7 +39,7 @@ export default function Menu ({click, toggleTheme, theme, onClose, increaseFontS
         <hr/>    
         <div style={{display:'inline-flex', padding:"15px"}} onClick={toggleTheme}>  
           <button className="nullButton">
-            <img src={contrast} style={{height: "2.25rem", width:"2.25rem"}}/>
+            <img alt="icone circular, com metade clara e metade escura, indicando contraste" src={contrast} style={{height: "2.25rem", width:"2.25rem"}}/>
             <h3 style={{padding:"5px 0 0px 15px"}}> {theme === "default" ? "Alto" : "Baixo"} contraste </h3>
           </button>
         </div>
