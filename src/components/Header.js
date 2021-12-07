@@ -6,21 +6,38 @@ import Menu from './Menu';
 const accImg = "https://upload.wikimedia.org/wikipedia/commons/d/db/Alternative_Handicapped_Accessible_sign.svg"
 
 
-function Header({ selector, theme }) {
+function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
     const titles = contentData.map((topic) => (
         {title: topic.title}
     ))
     const [click, setClick] = useState(false);
-    const [pos, setPosition] = useState("absolute")
+    const [pos, setPosition] = useState("absolute");
 
     return(
         <header>
-            <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}} accesskey="0" onClick={()=>{setClick(!click); setPosition(pos == "absolute" ? "fixed" : "absolute")}}>
-                <img src={accImg} style={{ height: "3rem", width:"3rem"}}/>                    
-                <small>[0]</small>
+            <ul className="acc-navbar">
+                <li>
+                    <a href="#content" accessKey="1" >Explicação[1]</a>
+                </li>
+                <li>
+                    <a href="#exercise" accessKey="2" >Exercício[2]</a>
+                </li>
+                <li>
+                    <a href="#footer" accessKey="3" >Rodapé[3]</a>
+                </li>
+            </ul>
+            <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}} onClick={()=>{setClick(!click); setPosition(pos === "absolute" ? "fixed" : "absolute")}}>
+                <img src={accImg} style={{ height: "3rem", width:"3rem"}}/>
             </div>
 
-            <Menu click={click} toggleTheme={selector} theme={theme} />
+            <Menu 
+                click={click} 
+                toggleTheme={selector} 
+                theme={theme} 
+                onClose={() => { setClick(false); setPosition("absolute"); }} 
+                increaseFontSize={increaseFontSize}   
+                decreaseFontSize={decreaseFontSize}
+            />
             <div className={'content'}>
                 <h1>{Array.from("AGPJEPLGAJTMS").sort().join('')} <span>Estudos</span></h1>
                 <Navbar topics={titles}/>
