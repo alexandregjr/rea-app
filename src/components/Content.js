@@ -12,7 +12,7 @@ function Content(props) {
 
         return(
             <main>
-                <div className={'content'}>
+                <div className={'content'} id="content">
                     <Subject from={(id - 1)} />
                 </div>
             </main>

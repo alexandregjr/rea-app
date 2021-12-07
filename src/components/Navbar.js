@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 function Navbar(props) {
     const links = props.topics.map((topic, index) =>         
-        <Link to={'/topic/' + (index + 1)} key={index} accesskey={index+1}>
-            {topic.title} [{index+1}]
+        <Link to={'/topic/' + (index + 1)} key={index}>
+            {topic.title}
         </Link>
     )
 

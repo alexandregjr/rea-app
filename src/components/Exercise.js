@@ -10,7 +10,7 @@ function Exercise(props) {
     ))
 
     return (
-        <div className={'exercise'}>
+        <div className={'exercise'} id="exercise">
             <h2>Exercícios</h2>
             {questions}
         </div>

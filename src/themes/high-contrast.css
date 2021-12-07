@@ -24,10 +24,22 @@ div.high-contrast header {
 }
 
 div.high-contrast .menu {
-    position: absolute;
+    position: fixed;
     height: 100vh; 
     width: max(20vw, 300px); 
     background-color: #000000;
+    z-index: 10;
+}
+
+div.high-contrast .acc-navbar {
+    position: absolute;
+    display: flex;
+    width: calc(100% - 100px);
+    margin-left: 100px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
     z-index: 10;
 }
 
@@ -36,6 +48,12 @@ div.high-contrast header h1 {
     word-break: break-all;
     padding: 10px;
     margin: 10px 0 
+}
+
+@media only screen and (max-width: 650px) {
+    div.high-contrast header h1 {
+        margin-top: 50px;
+    }
 }
 
 div.high-contrast header h1 span {
