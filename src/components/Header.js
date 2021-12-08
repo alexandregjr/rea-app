@@ -17,8 +17,14 @@ function Header({ selector, theme, increaseFontSize, decreaseFontSize }) {
     return(
         <header>
             <div style = {{position: pos, zIndex: 20, padding:"15px 0 0 15px"}}>
-                <button style = {{background: "none", border: "none"}} onClick={showMenu}>
-                    <img  alt="icone de pessoa em uma cadeira rolante, indicando acessibilidade" src={accImg} style={{ height: "3rem", width:"3rem"}}/>
+                <button 
+                    style={{background: "none", border: "none"}} 
+                    onClick={showMenu} 
+                    aria-controls="access_menu" 
+                    aria-expanded={`${click}`}
+                    aria-label={`${click ? "Fechar": "Abrir"} menu de acessibilidade.`}
+                >
+                    <img alt="icone de pessoa em uma cadeira rolante, indicando acessibilidade" src={accImg} style={{ height: "3rem", width:"3rem"}}/>
                 </button>
             </div>
             

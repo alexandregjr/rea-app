@@ -12,34 +12,34 @@ export default function Menu ({click, toggleTheme, theme, onClose, increaseFontS
   return (
     <>
       {click && <div style={{ width: "100vw", height: "100vh", position: "fixed", left: 0, top: 0, backgroundColor: "black", opacity: "0.6", zIndex: 9 }} onClick={onClose}></div>}
-      <div className="menu" style={{ display: click ? "block" : "none" }}>
+      <div className="menu" id="access_menu" style={{ display: click ? "block" : "none" }} >
         <h1 style={{marginTop: "15px", marginLeft:"calc(3rem + 15px)", paddingTop:"5px"}}>Menu</h1>
         <hr/>
         <div style={{display:'inline-flex', padding:"15px"}} onClick={()=>{setDisplay(display === "block" ? "none" : "block")}}>
-          <button className="nullButton"> 
-            <img alt="icone com duas letras T, uma pequena e outra grande, indicando modificações no tamanho da fonte" src={font} style={{height: "2.25rem", width:"2.25rem"}}/>
+          <button className="nullButton" aria-label="Alterar o tamanho da fonte." aria-controls="font_control_panel" aria-expanded={`${display === "block"}`} > 
+            <img aria-hidden="true" alt="icone com duas letras T, uma pequena e outra grande, indicando modificações no tamanho da fonte" src={font} style={{height: "2.25rem", width:"2.25rem"}}/>
             <h3>Fonte</h3>
           </button>
         </div>    
-        <div style={{paddingLeft: "calc(2.25rem + 15px)", display: display}}>
+        <div style={{paddingLeft: "calc(2.25rem + 15px)", display: display}} id="font_control_panel" >
           <div style={{display:'inline-flex'}} onClick={increaseFontSize}>
-            <button className="nullButton" style={{fontSize: "0.8em"}}>
-              <img alt="icone de mais, indicando aumento da fonte" src={mais} style={{height: "1.5rem", width:"1.5rem"}} />
+            <button className="nullButton" style={{fontSize: "0.8em"}} aria-label="Aumentar o tamanho da fonte." >
+              <img aria-hidden="true" alt="icone de mais, indicando aumento da fonte" src={mais} style={{height: "1.5rem", width:"1.5rem"}} />
               <h4>Aumentar</h4>
             </button>
           </div>
           <br/>
           <div style={{display:'inline-flex'}} onClick={decreaseFontSize}>
-            <button className="nullButton" style={{fontSize: "0.8em"}}>
-              <img alt="icone de menos, indicando diminuição da fonte" src={menos} style={{height: "1.5rem", width:"1.5rem"}} />
+            <button className="nullButton" style={{fontSize: "0.8em"}} aria-label="Diminuir o tamanho da fonte.">
+              <img aria-hidden="true" alt="icone de menos, indicando diminuição da fonte" src={menos} style={{height: "1.5rem", width:"1.5rem"}} />
               <h4>Diminuir</h4>
             </button>
           </div>
         </div>
         <hr/>    
         <div style={{display:'inline-flex', padding:"15px"}} onClick={toggleTheme}>  
-          <button className="nullButton">
-            <img alt="icone circular, com metade clara e metade escura, indicando contraste" src={contrast} style={{height: "2.25rem", width:"2.25rem"}}/>
+          <button className="nullButton" aria-label={`Alterar para o modo de ${theme === "default" ? "alto" : "baixo"} contraste.`} >
+            <img aria-hidden="true" alt="icone circular, com metade clara e metade escura, indicando contraste" src={contrast} style={{height: "2.25rem", width:"2.25rem"}}/>
             <h3 style={{padding:"5px 0 0px 15px"}}> {theme === "default" ? "Alto" : "Baixo"} contraste </h3>
           </button>
         </div>
